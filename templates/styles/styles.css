@@ -61,6 +61,8 @@ h1 {
     border-radius: 20px;
 }
 
+/* Forms */
+
 form {
     margin:10px;
     text-align: right;
@@ -100,4 +102,14 @@ form {
 
 #upload {
     text-align: left;
+}
+
+/* Home */
+
+.homepage {
+    padding: 10px;
+}
+
+p {
+    padding:10px;
 }

@@ -3,17 +3,22 @@
 <head>
     <link rel="stylesheet" href="styles/styles.css">
     <title>Social Distancing Analysis</title>
-    <script src="home.js"></script>
 </head>
 <body>
     <header>
-        <h1 id="title">Social Distancing Analysis: {{user["company"]}}</h1>
-        <a href="index.html" class="button" id="toplogin">Log Out</a>
+        <ul class="bar">
+            <img src="images/logo.svg" alt="Logo" width=40 height=40></img>
+            <h1 id="title" class="middle">Social Distancing Analysis</h1>
+            <a href="index.html" class="button" id="toplogin">Log Out</a>
+        </ul>
     </header>
-    <h1>Welcome back {{user["username"]}}.</h1>
-    <form method="post" enctype="multipart/form-data" id="upload" action="/upload">
-        <input type=file name=file>
-        <input class="button" type=submit value=Upload>
-    </form>
+    <div class="homepage">
+        <h1>Welcome back {{user["username"]}}.</h1>
+        <p>Upload a video to analyze.</p>
+        <form method="post" enctype="multipart/form-data" id="upload" action="/upload">
+            <input type=file name=file>
+            <input class="button" type=submit value=Upload>
+        </form>
+    </div>
 </body>
 </html>
