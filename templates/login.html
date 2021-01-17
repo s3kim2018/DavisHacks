@@ -5,17 +5,22 @@
     <title>Social Distancing Analysis</title>
 </head>
 <body class="landing">
-    <form class="log-in" action="/login" method="post">
-    <header>
-        <h1 id="title">Social Distancing Analysis</h1>
-    </header>
+        <header>
+            <ul class="bar">
+                <img src="images/logo.svg" alt="Logo" width=30 height=30 id="logo"></img>
+                <h1 id="title" class="middle">Social Distancing Analysis</h1>
+                <a href="signup.html" class="button" id="topsignup">Sign Up</a>
+                <a href="login.html" class="button" id="toplogin">Log In</a>
+            </ul>
+        </header>
     <div class="container">
         <div class="centered" id=landing>
-            <h1>Log In</h1>
+            <h1 class="middle">Log In</h1>
+            <form class="log-in" action="/login" method="post">
                 <label for="email">Email: <input type="email" id="email" name="email"><br></label><br>
                 <label for="password">Password: <input type="password" id="password" name="password"></label><br>
+                <button type="submit" value="submit" class="button" id="submit">Log In</button>
             </form>
-            <button type="submit" value="submit">Log In</button>
         </div>
     </div>
 </body>

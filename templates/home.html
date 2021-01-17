@@ -3,15 +3,17 @@
 <head>
     <link rel="stylesheet" href="styles/styles.css">
     <title>Social Distancing Analysis</title>
+    <script src="home.js"></script>
 </head>
 <body>
     <header>
-        <h1 id="title">Social Distancing Analysis</h1>
-        <button class="button" id="toplogin">Log Out</button>
+        <h1 id="title">Social Distancing Analysis: {{user["company"]}}</h1>
+        <a href="index.html" class="button" id="toplogin">Log Out</a>
     </header>
+    <h1>Welcome back {{user["username"]}}.</h1>
     <form method="post" enctype="multipart/form-data" id="upload" action="/upload">
         <input type=file name=file>
-        <input type=submit value=Upload>
+        <input class="button" type=submit value=Upload>
     </form>
 </body>
 </html>

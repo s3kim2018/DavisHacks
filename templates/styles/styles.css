@@ -21,6 +21,19 @@ header {
     display:inline;
 }
 
+h1 {
+    padding: 5px
+}
+
+.bar {
+    display:inline
+}
+
+#logo {
+    margin:0px;
+    padding:0px;
+}
+
 #toplogin {
     float: right;
     margin:0px;
@@ -43,6 +56,9 @@ header {
 #landing {
     background-color:rgb(22, 75, 78);
     padding:10px;
+    border: azure;
+    border-width: 10px;
+    border-radius: 20px;
 }
 
 form {
@@ -51,7 +67,6 @@ form {
 }
 
 .centered {
-    text-align: center;
     margin: 0;
     position: absolute;
     top: 50%;
@@ -60,9 +75,14 @@ form {
     transform: translate(-50%, -50%);
 }
 
+.middle {
+    text-align: center;
+}
+
 .button {
     background-color: #00eeff;
-    border: none;
+    border-radius: 10px;
+    border:none;
     color: rgb(59, 59, 59);
     padding: 15px 32px;
     text-align: center;
@@ -71,6 +91,12 @@ form {
     margin: 5px;
     cursor: pointer;
   }
+
+#submit {
+    margin: auto;
+    margin-top: 15px;
+    display:block;
+}
 
 #upload {
     text-align: left;
