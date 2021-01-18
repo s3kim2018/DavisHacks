@@ -13,7 +13,7 @@ const createMST = nodes => {
     if (nodes.length === 0) {
         console.log("No nodes.");
     } else {
-        // Initialize edges map.
+        // Declare edges map.
         const edges = new Map();
 
         // Initialize array of reached nodes and array of unreached nodes. All nodes start as unreached.
