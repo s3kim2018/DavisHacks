@@ -22,6 +22,14 @@ def signup():
         'company': company,
         'password': password
     })
+
+    comp = db.collection('companies').document(company).get()
+    if not comp.exists:
+        new_company = db.collection('companies').document(company)
+        new_company.set({
+            'company': company,
+            'images': []
+        })
     return render_template('login.html')
 
 @app.route('/login')
@@ -47,3 +55,15 @@ def login():
     else:
         print("Error: No user associated with email.")
         return render_template('login.html')
+
+@app.route('/upload', methods=['POST'])
+def upload_image():
+    upload  = request.get_json()
+    url     = str(upload.get('url'))
+    company = str(upload.get('company'))
+
+    comp    = db.collection('companies').document(company)
+    images  = comp.get().to_dict()['images']
+    comp.update({
+        'images': images + [url]
+    })
